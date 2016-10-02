@@ -1,4 +1,4 @@
-// you can also use imports, for example:
+package toptal.dmaragkos;// you can also use imports, for example:
 // import java.util.*;
 
 // you can write to stdout for debugging purposes, e.g.

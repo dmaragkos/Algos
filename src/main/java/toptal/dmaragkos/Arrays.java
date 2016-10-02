@@ -1,6 +1,5 @@
-/**
- * Created by a604592 on 9/25/2016.
- */
+package toptal.dmaragkos;
+
 public class Arrays {
     public int solution(int X, int[] A) {
         // write your code in Java SE 8

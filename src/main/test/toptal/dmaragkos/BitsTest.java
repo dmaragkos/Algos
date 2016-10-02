@@ -1,10 +1,11 @@
-import org.junit.Assert;
+package toptal.dmaragkos;
+
 import org.junit.Before;
 import org.junit.Test;
+import toptal.dmaragkos.Bits;
 
-/**
- * Created by a604592 on 9/25/2016.
- */
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class BitsTest {
 
     private Bits bits;
@@ -12,19 +13,18 @@ public class BitsTest {
     @Test
     public void should_work_with_example() {
         int A[] = new int[]{1, 0, 0, 1, 1};
+        int[] expected = {1, 1, 0, 1};
 
         int[] actual = bits.solution(A);
 
-        Assert.assertArrayEquals(new int[]{1, 1, 0, 1}, actual);
+        assertThat(expected).isEqualTo(actual);
     }
 
     @Test
     public void should_work_with_bignumber() {
-        int A[] = new int[]{1, 0, 0, 1, 1};
-
         int[] actual = bits.fromInt(100000);
 
-        Assert.assertArrayEquals(new int[]{1, 1, 0, 1}, actual);
+        assertThat(actual).isNotNull();
     }
 
     @Test
@@ -35,8 +35,8 @@ public class BitsTest {
         int actual1 = bits.toInt(A);
         int actual2 = bits.toInt(B);
 
-        Assert.assertEquals(9, actual1);
-        Assert.assertEquals(23, actual2);
+        assertThat(actual1).isEqualTo(9);
+        assertThat(actual2).isEqualTo(23);
     }
 
     @Test
@@ -47,12 +47,9 @@ public class BitsTest {
         int[] actual1 = bits.fromInt(9);
         int[] actual2 = bits.fromInt(23);
 
-//        for (int i : actual1) {
-//            System.out.println(i);
-//        }
-//        for (int i : actual2) {
-//            System.out.println(i);
-//        }
+
+        assertThat(actual1).isEqualTo(expected1);
+        assertThat(actual2).isEqualTo(expected2);
     }
 
     @Before

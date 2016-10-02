@@ -1,6 +1,8 @@
-import org.junit.Assert;
+package toptal.dmaragkos;
+
 import org.junit.Before;
 import org.junit.Test;
+import toptal.dmaragkos.Solution;
 
 import static org.junit.Assert.assertTrue;
 

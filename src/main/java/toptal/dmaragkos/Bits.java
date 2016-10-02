@@ -1,14 +1,16 @@
+package toptal.dmaragkos;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bits {
+class Bits {
     public int[] solution(int[] A) {
         // write your code in Java SE 8
         int intValue = toInt(A);
         return fromInt(-intValue);
     }
 
-    public int toInt(int[] A) {
+    int toInt(int[] A) {
         int intRepresentation = 0;
         for (int i = 0; i < A.length; i++) {
             intRepresentation += A[i] * Math.pow(-2, i);
@@ -16,7 +18,7 @@ public class Bits {
         return intRepresentation;
     }
 
-    public int[] fromInt(int X) {
+    int[] fromInt(int X) {
         final List<Integer> bits = new ArrayList<>();
         int rem;
         while (X != 0) {

@@ -1,5 +1,8 @@
+package toptal.dmaragkos;
+
 import org.junit.Before;
 import org.junit.Test;
+import toptal.dmaragkos.Discs;
 
 import static org.junit.Assert.assertTrue;
 
